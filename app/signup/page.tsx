@@ -15,7 +15,7 @@ export default function SignupPage() {
     e.preventDefault();
     setError('');
     try {
-      await signup(email, password, challenge);
+      await signup(email, password);
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Failed to sign up');
     }
